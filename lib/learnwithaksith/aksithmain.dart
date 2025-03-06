@@ -1,4 +1,5 @@
 import 'package:all_flutter_tutorial/learnwithaksith/alert_box.dart';
+import 'package:all_flutter_tutorial/learnwithaksith/curved_nav_bar.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/repaintboundry.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/scroll_bar.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/shimmer.dart';
@@ -37,7 +38,7 @@ class Learnwithaksith extends StatelessWidget{
     return MaterialApp(
       debugShowCheckedModeBanner: false,
       title: "Learnwithaksith",
-      theme:ThemeData.dark(),
+      // theme:ThemeData.dark(),
       // ThemeData(
       //   primarySwatch: Colors.green,
       //   primaryColor: Colors.red
@@ -65,9 +66,10 @@ class Learnwithaksith extends StatelessWidget{
       // VideoPlayerPackage(),
       // OverlappingCircleAvator(),
       //   const Stepperwidget(),
+        CurvedNavBar(),
       // DragAndDropExample()
       // const Repaintboundry(),
-      ScrollBarExample()
+      // ScrollBarExample()
     );
   }
 }

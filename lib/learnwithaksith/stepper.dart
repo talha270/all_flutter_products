@@ -40,55 +40,67 @@ class _StepperwidgetState extends State<Stepperwidget> {
             onDeleted: () {},
             shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(20))
           ),
-          Center(
-            child: Stepper(
-              steps: [
-                Step(
-                    isActive: isactive == 0,
-                    title:
-                        Text("Step 1", style: TextStyle(color: Colors.white)),
-                    content: Text(
-                      "step 1 is required",
-                      style: TextStyle(color: Colors.white),
-                    )),
-                Step(
-                    isActive: isactive == 1,
-                    title:
-                        Text("Step 2", style: TextStyle(color: Colors.white)),
-                    content: Text("step 2 is required",
-                        style: TextStyle(color: Colors.white))),
-                Step(
-                    isActive: isactive == 2,
-                    title:
-                        Text("Step 3", style: TextStyle(color: Colors.white)),
-                    content: Text("step 3 is required",
-                        style: TextStyle(color: Colors.white))),
-              ],
-              onStepTapped: (value) {
-                setState(() {
-                  isactive = value;
-                });
-              },
-              currentStep: isactive,
-              onStepContinue: () {
-                if (isactive != 2) {
+          Expanded(
+            child: Center(
+              child: Stepper(
+                controlsBuilder: (context, details) {
+                  return ElevatedButton(onPressed: () {
+                    
+                  }, child: Text("dsfdf"));
+                },
+                stepIconBuilder: (stepIndex, stepState) {
+                  return Image.asset("assets/images/more.png");
+                },
+                steps: [
+                  Step(
+
+                      isActive: isactive >= 0,
+                      state: StepState.complete,
+                      title:
+                          Text("Step 1", style: TextStyle(color: Colors.white)),
+                      content: Text(
+                        "step 1 is required",
+                        style: TextStyle(color: Colors.white),
+                      )),
+                  Step(
+                      isActive: isactive >= 1,
+                      title:
+                          Text("Step 2", style: TextStyle(color: Colors.white)),
+                      content: Text("step 2 is required",
+                          style: TextStyle(color: Colors.white))),
+                  Step(
+                      isActive: isactive == 2,
+                      title:
+                          Text("Step 3", style: TextStyle(color: Colors.white)),
+                      content: Text("step 3 is required",
+                          style: TextStyle(color: Colors.white))),
+                ],
+                onStepTapped: (value) {
                   setState(() {
-                    isactive++;
+                    isactive = value;
                   });
-                }
-              },
-              onStepCancel: () {
-                if (isactive != 0) {
-                  setState(() {
-                    isactive--;
-                  });
-                }
-              },
-              // type: StepperType.horizontal,
-              connectorColor: WidgetStatePropertyAll(Colors.purple),
-              connectorThickness: 3,
-              // stepIconHeight: 30,
-              stepIconWidth: 30,
+                },
+                currentStep: isactive,
+                onStepContinue: () {
+                  if (isactive != 2) {
+                    setState(() {
+                      isactive++;
+                    });
+                  }
+                },
+                onStepCancel: () {
+                  if (isactive != 0) {
+                    setState(() {
+                      isactive--;
+                    });
+                  }
+                },
+                type: StepperType.horizontal,
+                connectorColor: WidgetStatePropertyAll(Colors.purple),
+                connectorThickness: 3,
+                // stepIconHeight: 30,
+                stepIconWidth: 30,
+              ),
             ),
           ),
         ],
