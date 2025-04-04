@@ -7,10 +7,12 @@ import 'package:all_flutter_tutorial/learnwithaksith/sliver_appbar.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/snackbar.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/stack_position.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/stepper.dart';
+import 'package:all_flutter_tutorial/learnwithaksith/swithch_button.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/tabbar.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/take_only_number_textfiled.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/video_player.dart';
 import 'package:flutter/material.dart';
+import 'package:flutter/rendering.dart';
 
 import 'animatedtextkit.dart';
 import 'bottomnavigation.dart';
@@ -28,7 +30,10 @@ import 'imagepicker.dart';
 import 'images.dart';
 import 'overlapping_circle_avator.dart';
 
-void main()=>runApp(const Learnwithaksith());
+void main(){
+  debugRepaintRainbowEnabled=true;
+  runApp(const Learnwithaksith());
+}
 
 class Learnwithaksith extends StatelessWidget{
   const Learnwithaksith({super.key});
@@ -66,8 +71,10 @@ class Learnwithaksith extends StatelessWidget{
       // VideoPlayerPackage(),
       // OverlappingCircleAvator(),
       //   const Stepperwidget(),
-        CurvedNavBar(),
+      //   CurvedNavBar(),
+      // Bottomnavigationwidget(),
       // DragAndDropExample()
+      SwithchButton()
       // const Repaintboundry(),
       // ScrollBarExample()
     );

@@ -37,21 +37,33 @@ class _Bottomnavigatonwidgetstate extends State<Bottomnavigationwidget>{
           const Dismisablewidgets()
         ],
       ),
-      bottomNavigationBar: BottomNavigationBar(
-        items: const [
-          BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home" ),
-          BottomNavigationBarItem(icon: Icon(Icons.search),label: "Search" ),
-          BottomNavigationBarItem(icon: Icon(Icons.add),label: "Add" ),
-          BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile" )
-        ],
-        currentIndex: selectedindex,
-        onTap: (index)=>onchange(index),
-        selectedItemColor: Colors.red,
-        unselectedItemColor: Colors.black,
-        backgroundColor: Colors.black,
-        elevation: 50,
-        showUnselectedLabels: true,
-      ),
+
+      bottomNavigationBar: NavigationBar(destinations: [
+        NavigationDestination(icon: Container(height: 50,width: 50,color: Colors.purple,), label: "add"),
+        NavigationDestination(icon: Icon(Icons.add), label: "add"),
+      ],
+        backgroundColor: Colors.green,
+       indicatorColor: Colors.red,
+        // indicatorShape: RoundedRectangleBorder(borderRadius:  BorderRadius.circular(1)),
+        surfaceTintColor: Colors.yellow,
+        selectedIndex: selectedindex,
+        onDestinationSelected: onchange
+      )
+      // BottomNavigationBar(
+      //   items: const [
+      //     BottomNavigationBarItem(icon: Icon(Icons.home),label: "Home" ),
+      //     BottomNavigationBarItem(icon: Icon(Icons.search),label: "Search" ),
+      //     BottomNavigationBarItem(icon: Icon(Icons.add),label: "Add" ),
+      //     BottomNavigationBarItem(icon: Icon(Icons.person),label: "Profile" )
+      //   ],
+      //   currentIndex: selectedindex,
+      //   onTap: (index)=>onchange(index),
+      //   selectedItemColor: Colors.red,
+      //   unselectedItemColor: Colors.black,
+      //   backgroundColor: Colors.black,
+      //   elevation: 50,
+      //   showUnselectedLabels: true,
+      // ),
     );
   }
 
