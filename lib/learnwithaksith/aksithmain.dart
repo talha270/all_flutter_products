@@ -1,5 +1,6 @@
 import 'package:all_flutter_tutorial/learnwithaksith/alert_box.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/curved_nav_bar.dart';
+import 'package:all_flutter_tutorial/learnwithaksith/lottie.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/repaintboundry.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/scroll_bar.dart';
 import 'package:all_flutter_tutorial/learnwithaksith/shimmer.dart';
@@ -25,6 +26,7 @@ import 'drawer.dart';
 import 'dropdownbutton.dart';
 import 'encrupting_string.dart';
 import 'form.dart';
+import 'fractional_sizedbox.dart';
 import 'geolocator.dart';
 import 'imagepicker.dart';
 import 'images.dart';
@@ -74,7 +76,9 @@ class Learnwithaksith extends StatelessWidget{
       //   CurvedNavBar(),
       // Bottomnavigationwidget(),
       // DragAndDropExample()
-      SwithchButton()
+      // SwithchButton()
+      // Lottieanimation(),
+      FractionalSizedbox()
       // const Repaintboundry(),
       // ScrollBarExample()
     );

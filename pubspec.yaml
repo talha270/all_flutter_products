@@ -57,6 +57,7 @@ dev_dependencies:
   flutter_native_splash: ^2.4.1
   shimmer: ^3.0.0
   encrypt: ^5.0.3
+  lottie: ^3.2.0
 
   appinio_video_player: ^1.2.2
 # for geolocator
@@ -90,6 +91,7 @@ flutter:
     - assets/images/ui_images/
     - assets/videos/
     - assets/pdf/
+    - assets/animation/
 
   # An image asset can refer to one or more resolution-specific "variants", see
   # https://flutter.dev/assets-and-images/#resolution-aware
